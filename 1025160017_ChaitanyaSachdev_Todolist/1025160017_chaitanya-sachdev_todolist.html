@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My To Do List</title>
+    <style>
+        body {
+            font-family: Roboto;
+            margin: 20px;
+            background-color: #000000;
+        }
+        
+        h1 {
+            color: #ffffff;
+            text-align: center;
+        }   
+        
+        #container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: rgb(110, 0, 0);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        input {
+            width: 250px;
+            height: 30px;
+            font-size: 16px;
+            padding: 5px;
+            border-radius: 20px;
+            border: 2px solid #000000;
+        }
+        
+        button {
+            height: 42px;
+            width: 80px;
+            font-size: 16px;
+            background-color: #ffffff;
+            color: rgb(0, 0, 0);
+            border: none;
+            cursor: pointer;
+            border-radius: 20px;
+            align-self: center;
+        }
+        
+        
+        .task {
+            background-color: #ecf0f1;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border: 1px solid #bdc3c7;
+        }
+        
+        .delete-btn {
+            background-color: rgb(110, 0, 0);
+            color: rgb(255,255,255);
+            width: 60px;
+            height: 30px;
+            font-size: 14px;
+            float: right;
+            border-radius: 15px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>My To-Do List</h1>
+        
+        <input type="text" id="taskInput" placeholder="Enter a task" >
+        <button onclick="addTask()">Add Task</button>
+        
+        <div id="taskList"></div>
+    </div>
+
+    <script>
+        var taskCounter = 0;
+        
+        function addTask() {
+            var input = document.getElementById('taskInput');
+            var taskText = input.value;
+            
+            if (taskText == '') {
+                alert('Please enter a task!');
+                return;
+            }
+            
+            taskCounter++;
+            
+            var taskDiv = document.createElement('div');
+            taskDiv.className = 'task';
+            taskDiv.id = 'task' + taskCounter;
+            
+            taskDiv.innerHTML = taskText + '<button class="delete-btn" onclick="deleteTask(' + taskCounter + ')">Delete</button>';
+            
+            document.getElementById('taskList').appendChild(taskDiv);
+            
+            input.value = '';
+        }
+        
+        function deleteTask(taskId) {
+            var task = document.getElementById('task' + taskId);
+            task.remove();
+        }
+        
+        
+    </script>
+</body>
+</html>
