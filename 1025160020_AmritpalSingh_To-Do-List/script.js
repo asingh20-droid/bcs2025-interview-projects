@@ -22,7 +22,6 @@ function updateCounter() {
   const pendingTasks = totalTasks - doneTasks;
   taskCounter.textContent = `${pendingTasks} pending, ${doneTasks} done`;
 
-  // ✅ Update Progress Circle
   const percent = totalTasks === 0 ? 0 : Math.round((doneTasks / totalTasks) * 100);
   const offset = circumference - (percent / 100) * circumference;
   progressCircle.style.strokeDashoffset = offset;
@@ -84,17 +83,12 @@ taskInput.addEventListener("keypress", (e) => {
 });
 
 updateCounter();
-
-
-// Expand when clicked
 taskInput.addEventListener("focus", () => {
   taskInput.classList.add("expanded");
 });
 
-// Shrink back only when you click outside the input *and* button
 document.addEventListener("click", (e) => {
   if (e.target.id !== "taskInput" && e.target.id !== "addBtn") {
     taskInput.classList.remove("expanded");
   }
 });
-
