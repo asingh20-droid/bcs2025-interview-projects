@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: url("i98rzu.jpg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.todo-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 340px;
+    text-align: center;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+h1 {
+    margin-bottom: 8px;
+    color: #000000;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+.tagline {
+    color: black;
+    font-size: 15px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.progress-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+}
+
+.progress-ring__background {
+    fill: transparent;
+    stroke: rgba(255, 255, 255, 0.2);
+    stroke-width: 8;
+}
+
+.progress-ring__circle {
+    fill: transparent;
+    stroke: black;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    transition: stroke-dashoffset 0.3s ease;
+}
+
+#progressText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-weight: 600;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+#taskInput {
+    width: 120px;
+    padding: 8px;
+    border: 1px solid rgb(5, 5, 5);
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    color: black;
+    background-color: transparent;
+    transition: width 0.35s ease-in-out;
+
+}
+
+#taskInput:focus {
+    transform: scale(1.03);
+}
+
+#taskInput.expanded {
+    width: 250px;
+}
+
+#taskInput::placeholder {
+    color: black;
+}
+
+#addBtn {
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: inherit;
+}
+
+#addBtn:hover {
+    opacity: 0.9;
+    background: linear-gradient(135deg, #ff6a88, #ff7eb3, #ff9a76);
+    transform: scale(1.06);
+    transition: transform 0.3s ease;
+}
+
+#addBtn:active {
+    transform: scale(0.95);
+    transition: transform 700ms ease;
+}
+
+#taskCounter {
+    text-align: center;
+    margin: 10px 0;
+    color: black;
+    font-size: 14px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.task-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.custom-checkbox .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: black;
+    transition: all 0.18s ease;
+    background: transparent;
+}
+
+.custom-checkbox input:checked+.checkmark {
+    background: transparent;
+    border-color: black;
+}
+
+.custom-checkbox input:checked+.checkmark::after {
+    content: "✔";
+    line-height: 1;
+}
+
+.task-text {
+    max-width: 220px;
+    word-break: break-word;
+}
+
+.task-text.done {
+    text-decoration: line-through;
+    color: black;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
