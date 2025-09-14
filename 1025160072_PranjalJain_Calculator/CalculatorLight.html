@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <a href="CalculatorDark.html">
+    <img src="/image/LightCalculator (1).png">
+    </a>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="Calculator.js" defer></script>
+
+</head>
+
+<body class="LightMode">
+
+    
+
+    <div id="Calculator" class="">
+        <input id="display" readonly>
+        <div id="Keys">
+            <button onclick="Clear('AC')">AC</button>
+            <button onclick="AppendToDisplay('^')">^</button>
+            <button onclick="AppendToDisplay('%')">%</button>
+            <button onclick="AppendToDisplay('/')">/</button>
+            <button onclick="AppendToDisplay('Sin(')">Sin(x)</button>
+            <button onclick="AppendToDisplay('(')">(</button>
+
+            <button onclick="AppendToDisplay('7')">7</button>
+            <button onclick="AppendToDisplay('8')">8</button>
+            <button onclick="AppendToDisplay('9')">9</button>
+            <button onclick="AppendToDisplay('*')">*</button>
+            <button onclick="AppendToDisplay('Cos(')">Cos(x)</button>
+            <button onclick="AppendToDisplay(')')">)</button>
+
+            <button onclick="AppendToDisplay('4')">4</button>
+            <button onclick="AppendToDisplay('5')">5</button>
+            <button onclick="AppendToDisplay('6')">6</button>
+            <button onclick="AppendToDisplay('+')">+</button>
+            <button onclick="AppendToDisplay('Tan(')">Tan(x)</button>
+            <button onclick="AppendToDisplay('!')">!</button>
+
+            <button onclick="AppendToDisplay('1')">1</button>
+            <button onclick="AppendToDisplay('2')">2</button>
+            <button onclick="AppendToDisplay('3')">3</button>
+            <button onclick="AppendToDisplay('-')">-</button>
+            <button onclick="AppendToDisplay('sqrt(')">sqrt(x)</button>
+            <button onclick="AppendToDisplay(Math.PI)">&pi;</button>
+
+            <button onclick="AppendToDisplay('.')">.</button>
+            <button onclick="AppendToDisplay('0')">0</button>
+            <button onclick="SciMode()">Sf</button>
+            <button onclick="Result('=')">=</button>
+            <button onclick="AppendToDisplay('Log(')">Log(x)</button>
+            <button onclick="AppendToDisplay('Ln(')">Ln(x)</button>
+        </div>
+    </div>
+
+
+    
+
+</body>
+
+</html>

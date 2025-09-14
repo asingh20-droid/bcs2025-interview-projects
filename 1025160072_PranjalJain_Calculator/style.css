@@ -1,0 +1,103 @@
+
+.DarkMode{
+    background-color: #545454;
+    
+}
+.LightMode{
+    background-color: white;
+}
+img{
+    display: block;
+    margin: 0 auto;
+}
+.LightMode #Calculator{
+    font-family: Helvetica, sans-serif, Arial;
+    background-color: #545454;
+    border-radius: 30px;
+    max-width: 380px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.LightMode #Calculator.Sci{
+    font-family: Helvetica, sans-serif, Arial;
+    background-color: #545454;
+    border-radius: 30px;
+    max-width: 577px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.DarkMode #Calculator{
+    font-family: Helvetica, sans-serif, Arial;
+    background-color: white;
+    border-radius: 30px;
+    max-width: 380px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.DarkMode #Calculator.Sci{
+    font-family: Helvetica, sans-serif, Arial;
+    background-color: white;
+    border-radius: 30px;
+    max-width: 577px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.LightMode #display{
+    width: 100%;
+    padding: 10px;
+    font-size: 40px;
+    border: none;
+    background-color: #545454;
+    color: white;
+}
+.DarkMode #display{
+    width: 100%;
+    padding: 10px;
+    font-size: 40px;
+    border: none;
+    background-color: white;
+    color: #545454;
+}
+#Keys{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding: 20px;
+    margin: 0 auto;
+}
+.LightMode button{
+    width: 80px;
+    height: 60px;
+    color: black;
+    background-color: #ff904c;
+    font-size: large;
+    border-radius: 20px;
+    border: none;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+.DarkMode button{
+    width: 80px;
+    height: 60px;
+    color: white;
+    background-color: #0096b3;
+    font-size: large;
+    border-radius: 20px;
+    border: none;
+    font-weight: bolder;
+    cursor: pointer;
+
+}
+.LightMode button:hover{
+    background-color: #ffa46c;
+}
+.LightMode button:active{
+    background-color: #ffc39d;
+}
+.DarkMode button:hover{
+    background-color: #02bbe0;
+}
+.DarkMode button:active{
+    background-color: #02d5ff;
+}
