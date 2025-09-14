@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>To-Do List</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="todo-container">
+    <h1>To-Do List</h1>
+    <p class="tagline">Stay organized. Stay productive.</p>
+
+    <div class="progress-container">
+      <svg class="progress-ring" width="100" height="100">
+        <circle class="progress-ring__background" cx="50" cy="50" r="45" />
+        <circle class="progress-ring__circle" cx="50" cy="50" r="45" />
+      </svg>
+      <span id="progressText">0%</span>
+    </div>
+
+    <div class="input-section">
+      <input type="text" id="taskInput" placeholder="Add a new task...">
+      <button id="addBtn">Add</button>
+    </div>
+
+    <p id="taskCounter">0 pending, 0 done</p>
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
